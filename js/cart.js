@@ -5,9 +5,8 @@ document.getElementById('case-btn-plus').addEventListener('click', function () {
     //console.log('Case Plus Button Clicked');
     const caseInputField = document.getElementById('case-input-field');
     const caseInputString = caseInputField.value;
-    const caseInputNumber = parseInt(caseInputString);
+    const previousCaseInputNumber = parseInt(caseInputString);
 
-    const previousCaseInputNumber = caseInputNumber;
     const currentCaseInputNumber = previousCaseInputNumber + 1;
 
     caseInputField.value = currentCaseInputNumber;
@@ -18,11 +17,9 @@ document.getElementById('case-btn-minus').addEventListener('click', function () 
     //console.log('Case Plus Button Clicked');
     const caseInputField = document.getElementById('case-input-field');
     const caseInputString = caseInputField.value;
-    const caseInputNumber = parseInt(caseInputString);
+    const previousCaseInputNumber = parseInt(caseInputString);
 
-    const previousCaseInputNumber = caseInputNumber;
     const currentCaseInputNumber = previousCaseInputNumber - 1;
 
     caseInputField.value = currentCaseInputNumber;
-
 })
