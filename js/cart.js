@@ -19,7 +19,9 @@ document.getElementById('case-btn-minus').addEventListener('click', function () 
     const caseInputString = caseInputField.value;
     const previousCaseInputNumber = parseInt(caseInputString);
 
+
     const currentCaseInputNumber = previousCaseInputNumber - 1;
 
     caseInputField.value = currentCaseInputNumber;
+
 })
