@@ -1,31 +1,5 @@
 //console.log('Cart js initiated');
 
-function updateCaseNumber(isIncrease) {
-    const caseInputField = document.getElementById('case-input-field');
-    const caseInputString = caseInputField.value;
-    const previousCaseInputNumber = parseInt(caseInputString);
-
-    let currentCaseInputNumber;
-
-    if (isIncrease) {
-        currentCaseInputNumber = previousCaseInputNumber + 1;
-    }
-    else {
-        currentCaseInputNumber = previousCaseInputNumber - 1;
-    }
-
-    caseInputField.value = currentCaseInputNumber;
-
-    return currentCaseInputNumber;
-}
-
-function updateCaseTotalPrice(totalCaseNumber) {
-    const totalCasePrice = totalCaseNumber * 59;
-
-    const casePriceElement = document.getElementById('case-price');
-    casePriceElement.innerText = totalCasePrice;
-}
-
 /** Case Button Plus */
 document.getElementById('case-btn-plus').addEventListener('click', function () {
     const totalCaseNumber = updateCaseNumber(true);
