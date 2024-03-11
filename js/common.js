@@ -47,3 +47,33 @@ function updatePhonePrice(totalPhoneNumber) {
 
     phonePriceElement.innerText = currentPhonePrice;
 }
+
+function getElementById(elementId) {
+    const getElement = document.getElementById(elementId);
+    const elementString = getElement.innerText;
+    const elementNumberTotal = parseInt(elementString);
+
+    return elementNumberTotal;
+}
+function setTextElementById(elementId, value) {
+    const textElement = document.getElementById(elementId);
+    textElement.innerText = value;
+}
+
+function calculateSubtotal() {
+    const totalPhonePrice = getElementById('phone-price');
+
+    const totalCasePrice = getElementById('case-price');
+
+    const currentSubTotal = totalPhonePrice + totalCasePrice;
+
+    setTextElementById('sub-total', currentSubTotal);
+
+    const taxAmount = currentSubTotal * 0.1;
+    const taxAmountFixed = parseFloat(taxAmount.toFixed(2));
+    setTextElementById('tax-amount', taxAmountFixed);
+
+    const totalAmount = currentSubTotal + taxAmountFixed;
+    setTextElementById('total-amount', totalAmount);
+
+}
