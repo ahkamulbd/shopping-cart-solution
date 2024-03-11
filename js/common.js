@@ -18,7 +18,7 @@ function updateCaseNumber(isIncrease) {
 }
 
 function updateCaseTotalPrice(totalCaseNumber) {
-    const totalCasePrice = totalCaseNumber * 59;
+    const totalCasePrice = totalCaseNumber * 50;
 
     const casePriceElement = document.getElementById('case-price');
     casePriceElement.innerText = totalCasePrice;
@@ -43,7 +43,7 @@ function updatePhoneInput(isIncrease) {
 
 function updatePhonePrice(totalPhoneNumber) {
     const phonePriceElement = document.getElementById('phone-price');
-    const currentPhonePrice = totalPhoneNumber * 1219;
+    const currentPhonePrice = totalPhoneNumber * 1000;
 
     phonePriceElement.innerText = currentPhonePrice;
 }
